@@ -337,6 +337,7 @@ body.loaded{
 .fill.spring      { background-color: #2ecc71cc; }
 .fill.angular     { background-color: #c0392bcc; }
 .fill.sql         { background-color: #3498dbcc; }
+.fill.mongo       { background-color: #13AA52; }
 .fill.git         { background-color: #f1502fcc; }
 .fill.responsive  { background-color: #8e44adcc; }
 .fill.json        { background-color: #e67e22cc; }
