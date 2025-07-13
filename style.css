@@ -101,9 +101,17 @@ body.loaded{
   padding: 20px;
 }
 
-#bottoniInfo{
-  display: flex;
-  flex-direction: row;
+#info {
+  width: fit-content;
+  max-width: none;
+  text-align: left;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  z-index: 2;
+  padding: 20px;
 }
 
 #info .btn{
@@ -117,6 +125,9 @@ body.loaded{
   border: 2px solid white;
   margin: 12px 12px 0 0;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  min-width: 120px;
+  text-align: center;
 }
 
 #info .btn:hover{
@@ -309,9 +320,17 @@ body.loaded{
   text-align: left;
 }
 
-.skill p{
+.skill p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 8px;
   font-weight: bold;
+}
+
+.skill-icon {
+  width: 26px;
+  height: 26px;
 }
 
 .barra{
@@ -334,9 +353,11 @@ body.loaded{
 .fill.css         { background-color: #2980b9cc; }
 .fill.js          { background-color: #f1c40fcc; }
 .fill.java        { background-color: #16a085cc; }
+.fill.python      { background-color: #306998; }
 .fill.spring      { background-color: #2ecc71cc; }
 .fill.angular     { background-color: #c0392bcc; }
 .fill.sql         { background-color: #3498dbcc; }
+.fill.postgresql  { background-color: #336791; }
 .fill.mongo       { background-color: #13AA52; }
 .fill.git         { background-color: #f1502fcc; }
 .fill.responsive  { background-color: #8e44adcc; }
@@ -476,6 +497,115 @@ body.loaded{
 }
 
 /* FINE STILI BLOCCO4 */
+
+/* INIZIO STILI BLOCCO5 */
+
+#blocco5 {
+  width: 100%;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #333232, #171717);
+  color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#achievements h2 {
+  font-size: 3em;
+  margin-bottom: 50px;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+#achievements h2::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background-color: #ffffff;
+  display: block;
+  margin: 20px auto 0 auto;
+  border-radius: 2px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.gallery img {
+  height: 250px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.35);
+}
+
+/* Lightbox */
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(255,255,255,0.1);
+}
+
+#closeLightbox {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#closeLightbox:hover {
+  color: #00b894;
+}
+
+#lightbox {
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+#lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#lightbox.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* FINE STILI BLOCCO5 */
 
 /* STILI FOOTER */
 

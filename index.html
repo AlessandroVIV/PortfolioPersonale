@@ -26,7 +26,14 @@
       gtag("config", "G-KXHWKFWX52");
     </script>
   </head>
+
   <body>
+    <!--Parte del lightbox-->
+    <div id="lightbox">
+      <span id="closeLightbox">&times;</span>
+      <img id="lightboxImage" src="" alt="Zoomed achievement" />
+    </div>
+
     <div id="selezionaLingua">
       <img id="bandiera" src="img/unitedKingdom.png" alt="Change language" />
     </div>
@@ -41,6 +48,7 @@
           <button class="btn chi">Chi sono</button>
           <button class="btn comp">Competenze</button>
           <button class="btn progetti">Progetti</button>
+          <button class="btn achievements">Achievements</button>
           <button class="btn contatti">Contatti</button>
         </div>
       </div>
@@ -88,30 +96,41 @@
 
           <div id="skillsLinguaggi">
             <div class="skill">
-              <p>HTML</p>
+              <p><img src="./img/icone/html.png" class="skill-icon" />HTML</p>
               <div class="barra">
                 <div class="fill html" data-width="100%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <p>CSS</p>
+              <p><img src="./img/icone/css-3.png" class="skill-icon" />CSS</p>
               <div class="barra">
                 <div class="fill css" data-width="80%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <p>JavaScript</p>
+              <p>
+                <img src="./img/icone/js.png" class="skill-icon" />Javascript
+              </p>
               <div class="barra">
                 <div class="fill js" data-width="60%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <p>Java</p>
+              <p><img src="./img/icone/java.png" class="skill-icon" />Java</p>
               <div class="barra">
                 <div class="fill java" data-width="67%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <p>
+                <img src="./img/icone/python.png" class="skill-icon" />Python
+              </p>
+              <div class="barra">
+                <div class="fill python" data-width="60%"></div>
               </div>
             </div>
           </div>
@@ -122,14 +141,20 @@
 
           <div id="skillsFrameworks">
             <div class="skill">
-              <p>Spring boot</p>
+              <p>
+                <img
+                  src="./img/icone/springboot.png"
+                  class="skill-icon" />Spring boot
+              </p>
               <div class="barra">
                 <div class="fill spring" data-width="67%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <p>Angular</p>
+              <p>
+                <img src="./img/icone/angular.png" class="skill-icon" />Angular
+              </p>
               <div class="barra">
                 <div class="fill angular" data-width="65%"></div>
               </div>
@@ -142,21 +167,34 @@
 
           <div id="skillsDatabase">
             <div class="skill">
-              <p>MySQL</p>
+              <p><img src="./img/icone/mysql.png" class="skill-icon" />MySQL</p>
               <div class="barra">
                 <div class="fill sql" data-width="85%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <p>MongoDB</p>
+              <p>
+                <img
+                  src="./img/icone/postgres.png"
+                  class="skill-icon" />PostgreSQL
+              </p>
               <div class="barra">
-                <div class="fill mongo" data-width="60%"></div>
+                <div class="fill postgresql" data-width="60%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <p>Git</p>
+              <p>
+                <img src="./img/icone/mongodb.png" class="skill-icon" />MongoDB
+              </p>
+              <div class="barra">
+                <div class="fill mongo" data-width="72%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <p><img src="./img/icone/git.png" class="skill-icon" />Git</p>
               <div class="barra">
                 <div class="fill git" data-width="80%"></div>
               </div>
@@ -169,21 +207,30 @@
 
           <div id="skillsAltro">
             <div class="skill">
-              <p>Responsive Design</p>
+              <p>
+                <img
+                  src="./img/icone/responsive.png"
+                  class="skill-icon" />Responsive Design
+              </p>
               <div class="barra">
                 <div class="fill responsive" data-width="75%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <p>JSON server</p>
+              <p>
+                <img src="./img/icone/json.png" class="skill-icon" />JSON Server
+              </p>
               <div class="barra">
                 <div class="fill json" data-width="88%"></div>
               </div>
             </div>
 
             <div class="skill">
-              <p id="localStorage">Gestione Local Storage</p>
+              <p id="localStorage">
+                <img src="./img/icone/localstorage.png" class="skill-icon" />
+                <span>Gestione Local Storage</span>
+              </p>
               <div class="barra">
                 <div class="fill storage" data-width="80%"></div>
               </div>
@@ -255,6 +302,34 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="blocco5">
+      <div id="achievements" class="fade-in">
+        <h2>Achievements</h2>
+        <div class="gallery">
+          <img
+            src="./files/Certificazioni/attestatoFullstack.png"
+            alt="Attestato Fullstack"
+            class="zoomable" />
+          <img
+            src="./files/Certificazioni/attestatoPython.png"
+            alt="Attestato python"
+            class="zoomable" />
+          <img
+            src="./files/Certificazioni/attestatoCAD.png"
+            alt="Attestato python"
+            class="zoomable" />
+          <img
+            src="./files/Certificazioni/attestatoInventor.png"
+            alt="Attestato python"
+            class="zoomable" />
+          <img
+            src="./files/Certificazioni/attestatoICDL.png"
+            alt="Attestato python"
+            class="zoomable" />
         </div>
       </div>
     </div>

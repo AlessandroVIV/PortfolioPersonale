@@ -1,95 +1,90 @@
-const elementi = document.querySelectorAll('.fade-in');
+const elementi = document.querySelectorAll(".fade-in");
 
-window.addEventListener('scroll', () => {
-
-  elementi.forEach(el => {
+window.addEventListener("scroll", () => {
+  elementi.forEach((el) => {
     const rect = el.getBoundingClientRect();
 
-    if(
+    if (
       rect.top < window.innerHeight - 100 &&
       rect.bottom > 0 &&
-      !el.classList.contains('show')
+      !el.classList.contains("show")
     ) {
-      el.classList.add('show');
+      el.classList.add("show");
     }
-
   });
-
 });
 
-window.history.scrollRestoration = 'manual';
+window.history.scrollRestoration = "manual";
 
-window.addEventListener('DOMContentLoaded', () => {
-  window.scrollTo(0, 0); 
+window.addEventListener("DOMContentLoaded", () => {
+  window.scrollTo(0, 0);
 });
 
-window.addEventListener('load', () => {
-  document.body.classList.add('loaded');
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
 });
 
-document.querySelector('.btn.chi').addEventListener('click', () => {
-  const target = document.querySelector('#blocco2');
+document.querySelector(".btn.chi").addEventListener("click", () => {
+  const target = document.querySelector("#blocco2");
   target.scrollIntoView({
-    behavior: 'smooth',
-    block: 'center' 
+    behavior: "smooth",
+    block: "center",
   });
 });
 
-document.querySelector('.btn.comp').addEventListener('click', () => {
-  const target = document.querySelector('#blocco3');
-  target.scrollIntoView({ behavior: 'smooth' });
+document.querySelector(".btn.comp").addEventListener("click", () => {
+  const target = document.querySelector("#blocco3");
+  target.scrollIntoView({ behavior: "smooth" });
 });
 
-document.querySelector('.btn.progetti').addEventListener('click', () => {
-  const target = document.querySelector('#blocco4');
-  target.scrollIntoView({ behavior: 'smooth',  block: 'center' });
+document.querySelector(".btn.progetti").addEventListener("click", () => {
+  const target = document.querySelector("#blocco4");
+  target.scrollIntoView({ behavior: "smooth", block: "center" });
 });
 
-document.querySelector('.btn.contatti').addEventListener('click', () => {
-  const target = document.querySelector('footer');
-  target.scrollIntoView({ behavior: 'smooth' });
+document.querySelector(".btn.achievements").addEventListener("click", () => {
+  const target = document.querySelector("#blocco5");
+  target.scrollIntoView({ behavior: "smooth", block: "center" });
 });
 
-document.querySelector('.btn.su').addEventListener('click', () => {
-  const target = document.querySelector('#blocco1');
-  target.scrollIntoView({ behavior: 'smooth' });
+document.querySelector(".btn.contatti").addEventListener("click", () => {
+  const target = document.querySelector("footer");
+  target.scrollIntoView({ behavior: "smooth" });
 });
 
-const skillBars = document.querySelectorAll('.fill');
+document.querySelector(".btn.su").addEventListener("click", () => {
+  const target = document.querySelector("#blocco1");
+  target.scrollIntoView({ behavior: "smooth" });
+});
 
-const observer = new IntersectionObserver(entries => {
+const skillBars = document.querySelectorAll(".fill");
 
-  entries.forEach(entry => {
-
-    if(entry.isIntersecting) {
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
       const el = entry.target;
       const width = el.dataset.width;
       el.style.width = width;
     }
-
   });
-
 });
 
-skillBars.forEach(bar => {
+skillBars.forEach((bar) => {
   observer.observe(bar);
 });
 
 function rimuoviFadeInResponsive() {
-
-  const chisono = document.querySelector('#chisono');
+  const chisono = document.querySelector("#chisono");
 
   if (window.innerWidth <= 600) {
-    chisono.classList.remove('fade-in');
-  } 
-
+    chisono.classList.remove("fade-in");
+  }
 }
 
-window.addEventListener('load', rimuoviFadeInResponsive);
-window.addEventListener('resize', rimuoviFadeInResponsive);
+window.addEventListener("load", rimuoviFadeInResponsive);
+window.addEventListener("resize", rimuoviFadeInResponsive);
 
 const testi = {
-
   it: {
     nome: "Alessandro Vivaldi",
     titolo: "Junior Fullstack Developer",
@@ -103,30 +98,34 @@ const testi = {
     chisonoPar2: `Seguendo un corso da <b>Fullstack Developer</b> della durata di quasi un anno, ho acquisito <b>competenze base</b> sul mondo della programmazione passando dalle basi di <b>HTML e CSS, a Javascript fino ad Angular.</b> Dopodiché son passato alla parte di <b>sviluppo backend con MySQL, Java base e Spring.</b>`,
     chisonoPar3: `Questo <b>corso</b> mi ha dato la spinta per continuare a <b>creare</b> e ad <b>imparare</b> di più su questo <b>vasto mondo</b> partendo anche da un <b>semplice portfolio come questo!</b>`,
     competenzeTitolo: "Le mie competenze",
-    competenzeLinguaggi:"Linguaggi",
-    competenzeDatabase:"Database / Controllo Versione",
-    competenzeAltro:"Altro",
-    competenzeLocalStorage:"Gestione Local Storage",
+    competenzeLinguaggi: "Linguaggi",
+    competenzeDatabase: "Database / Controllo Versione",
+    competenzeAltro: "Altro",
+    competenzeLocalStorage: "Gestione Local Storage",
     progettiTitolo: "I miei progetti",
     contattiTitolo: "Contatti",
     cvText: "Vuoi sapere di più su di me? Scarica il mio CV!",
     cvBtn: "Scarica CV",
     progetto1Titolo: "Replica sito ufficiale Nike",
-    progetto1Desc: "Una replica responsive del sito ufficiale Nike comprendente di registrazione, login, carrello e registro ordini.",
+    progetto1Desc:
+      "Una replica responsive del sito ufficiale Nike comprendente di registrazione, login, carrello e registro ordini.",
     progetto1Frontend: "Vai alla parte Frontend",
     progetto1Backend: "Vai alla parte Backend",
     progetto2Titolo: "Prenotazione Cinema 24h",
-    progetto2Desc: "Un'app di prenotazione cinema realizzata entro 24h, in gruppi da 3, durante una coding challenge",
+    progetto2Desc:
+      "Un'app di prenotazione cinema realizzata entro 24h, in gruppi da 3, durante una coding challenge",
     progetto2Link: "Vai al progetto",
     progetto3Titolo: "Portfolio personale",
-    progetto3Desc: "Questo stesso portfolio lo considero uno dei miei progetti! Spero ce ne saranno ancora tanti a venire!",
-    tornaSu: "Torna su"
+    progetto3Desc:
+      "Questo stesso portfolio lo considero uno dei miei progetti! Spero ce ne saranno ancora tanti a venire!",
+    tornaSu: "Torna su",
   },
 
   en: {
     nome: "Alessandro Vivaldi",
     titolo: "Junior Fullstack Developer",
-    descrizione: "From HTML and CSS3 basics, to databases with Spring and MySQL",
+    descrizione:
+      "From HTML and CSS3 basics, to databases with Spring and MySQL",
     chi: "About me",
     competenze: "Skills",
     progetti: "Projects",
@@ -145,24 +144,26 @@ const testi = {
     cvText: "Want to know more about me? Download my CV!",
     cvBtn: "Download CV",
     progetto1Titolo: "Nike official site replica",
-    progetto1Desc: "A responsive replica of the official Nike site, with login, register, cart and order tracking.",
+    progetto1Desc:
+      "A responsive replica of the official Nike site, with login, register, cart and order tracking.",
     progetto1Frontend: "Go to Frontend",
     progetto1Backend: "Go to Backend",
     progetto2Titolo: "Cinema Booking App (24h)",
-    progetto2Desc: "A cinema booking app made in 24h with a team of 3, during a coding challenge.",
+    progetto2Desc:
+      "A cinema booking app made in 24h with a team of 3, during a coding challenge.",
     progetto2Link: "View project",
     progetto3Titolo: "Personal portfolio",
-    progetto3Desc: "I consider this portfolio one of my own projects! And I hope many more will come!",
-    tornaSu: "Go back up"
-  }
-
+    progetto3Desc:
+      "I consider this portfolio one of my own projects! And I hope many more will come!",
+    tornaSu: "Go back up",
+  },
 };
 
 let linguaCorrente = "it";
 const linguaSalvata = localStorage.getItem("lingua");
 const bandiera = document.getElementById("bandiera");
 
-if(linguaSalvata && linguaSalvata !== linguaCorrente){
+if (linguaSalvata && linguaSalvata !== linguaCorrente) {
   linguaCorrente = linguaSalvata;
   aggiornaBandiera();
   aggiornaTesti();
@@ -176,12 +177,13 @@ document.getElementById("selezionaLingua").addEventListener("click", () => {
 });
 
 function aggiornaBandiera() {
-  bandiera.src = linguaCorrente === "it" ? "img/unitedKingdom.png" : "img/italy.png";
-  bandiera.alt = linguaCorrente === "it" ? "Switch to English" : "Passa all'italiano";
+  bandiera.src =
+    linguaCorrente === "it" ? "img/unitedKingdom.png" : "img/italy.png";
+  bandiera.alt =
+    linguaCorrente === "it" ? "Switch to English" : "Passa all'italiano";
 }
 
 function aggiornaTesti() {
-
   const t = testi[linguaCorrente];
 
   // Prima parte
@@ -209,7 +211,8 @@ function aggiornaTesti() {
   document.querySelector("#linguaggi h3").innerText = t.competenzeLinguaggi;
   document.querySelector("#database h3").innerText = t.competenzeDatabase;
   document.querySelector("#altro h3").innerText = t.competenzeAltro;
-  document.querySelector("#localStorage").innerText = t.competenzeLocalStorage
+  document.querySelector("#localStorage span").innerText =
+    t.competenzeLocalStorage;
   document.querySelector("#progetti h2").innerText = t.progettiTitolo;
   document.querySelector("#contatti h2").innerText = t.contattiTitolo;
 
@@ -234,6 +237,39 @@ function aggiornaTesti() {
 
   // CV
   document.querySelector("#cv h3").innerText = t.cvText;
-  document.querySelector("#cv .btn").innerHTML = `<i class="fas fa-download"></i>${t.cvBtn}`;
-
+  document.querySelector(
+    "#cv .btn"
+  ).innerHTML = `<i class="fas fa-download"></i>${t.cvBtn}`;
 }
+
+// Gestione Lightbox per gli Achievements
+const zoomableImages = document.querySelectorAll(".zoomable");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightboxImage");
+const closeBtn = document.getElementById("closeLightbox");
+
+zoomableImages.forEach((img) => {
+  img.addEventListener("click", () => {
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.classList.add("active");
+    lightbox.classList.remove("fade-out");
+  });
+});
+
+function closeLightbox() {
+  lightbox.classList.add("fade-out");
+  lightbox.classList.remove("active");
+  setTimeout(() => {
+    lightbox.classList.remove("fade-out");
+    lightboxImg.src = "";
+  }, 300); // matcha col transition
+}
+
+closeBtn.addEventListener("click", closeLightbox);
+
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    closeLightbox();
+  }
+});
