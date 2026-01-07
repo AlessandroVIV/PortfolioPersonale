@@ -105,7 +105,8 @@ const testi = {
     progettiTitolo: "I miei progetti",
     contattiTitolo: "Contatti",
     cvText: "Vuoi sapere di più su di me? Scarica il mio CV!",
-    cvBtn: "Scarica CV",
+    cvBtnSintetico: "CV Sintetico",
+    cvBtnCompleto: "CV Completo",
     progetto1Titolo: "Replica sito ufficiale Nike",
     progetto1Desc:
       "Una replica responsive del sito ufficiale Nike comprendente di registrazione, login, carrello e registro ordini.",
@@ -147,7 +148,8 @@ const testi = {
     progettiTitolo: "My projects",
     contattiTitolo: "Contacts",
     cvText: "Want to know more about me? Download my CV!",
-    cvBtn: "Download CV",
+    cvBtnSintetico: "Short CV",
+    cvBtnCompleto: "Full CV",
     progetto1Titolo: "Nike official site replica",
     progetto1Desc:
       "A responsive replica of the official Nike site, with login, register, cart and order tracking.",
@@ -254,9 +256,9 @@ function aggiornaTesti() {
 
   // CV
   document.querySelector("#cv h3").innerText = t.cvText;
-  document.querySelector(
-    "#cv .btn"
-  ).innerHTML = `<i class="fas fa-download"></i>${t.cvBtn}`;
+  const cvBtns = document.querySelectorAll("#cv .btn");
+  cvBtns[0].innerHTML = `<i class="fas fa-download"></i>${t.cvBtnSintetico}`;
+  cvBtns[1].innerHTML = `<i class="fas fa-download"></i>${t.cvBtnCompleto}`;
 }
 
 // Gestione Lightbox per gli Achievements
