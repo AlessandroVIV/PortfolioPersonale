@@ -119,6 +119,11 @@ const testi = {
     progetto3Desc:
       "Questo stesso portfolio lo considero uno dei miei progetti! Spero ce ne saranno ancora tanti a venire!",
     tornaSu: "Torna su",
+    progetto4Titolo: "E-Commerce Articoli Sportivi",
+    progetto4Desc:
+      "Una semplice applicazione di e-commerce per articoli sportivi realizzata come progetto finale del corso con Betacom",
+    progetto4Frontend: "Vai alla parte Frontend",
+    progetto4Backend: "Vai alla parte Backend",
   },
 
   en: {
@@ -156,6 +161,11 @@ const testi = {
     progetto3Desc:
       "I consider this portfolio one of my own projects! And I hope many more will come!",
     tornaSu: "Go back up",
+    progetto4Titolo: "Sports Articles E-Commerce",
+    progetto4Desc:
+      "A simple e-commerce application for sports articles, built as the final project of the Betacom course.",
+    progetto4Frontend: "Go to Frontend",
+    progetto4Backend: "Go to Backend",
   },
 };
 
@@ -234,6 +244,13 @@ function aggiornaTesti() {
   cards[2].querySelector("h3").innerText = t.progetto3Titolo;
   cards[2].querySelector("p").innerText = t.progetto3Desc;
   cards[2].querySelector("button").innerText = t.tornaSu;
+
+  cards[3].querySelector("h3").innerText = t.progetto4Titolo;
+  cards[3].querySelector("p").innerText = t.progetto4Desc;
+
+  const link4 = cards[3].querySelectorAll("a");
+  link4[0].innerText = t.progetto4Frontend;
+  link4[1].innerText = t.progetto4Backend;
 
   // CV
   document.querySelector("#cv h3").innerText = t.cvText;
