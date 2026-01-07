@@ -165,7 +165,7 @@ const testi = {
     tornaSu: "Go back up",
     progetto4Titolo: "Sports Articles E-Commerce",
     progetto4Desc:
-      "A simple e-commerce application for sports articles, built as the final project of the Betacom course.",
+      "A simple e-commerce application for sports items, built as the final project of the Betacom course.",
     progetto4Frontend: "Go to Frontend",
     progetto4Backend: "Go to Backend",
   },
