@@ -92,6 +92,7 @@ const testi = {
     chi: "Chi sono",
     competenze: "Competenze",
     progetti: "Progetti",
+    achievements: "Achievements",
     contatti: "Contatti",
     chisonoTitolo: "Chi sono",
     chisonoPar1: `Mi chiamo <b>Alessandro Vivaldi</b>, sono un ragazzo di <b>Roma</b> che ha sviluppato, tra il 2024 e il 2025, una <b>forte passione</b> per il mondo della <b>programmazione</b> sia <b>frontend</b> che <b>backend.</b>`,
@@ -136,6 +137,7 @@ const testi = {
     competenze: "Skills",
     progetti: "Projects",
     contatti: "Contacts",
+    achievements: "Achievements",
     chisonoTitolo: "About me",
     chisonoPar1: `My name is <b>Alessandro Vivaldi</b>, I’m from <b>Rome</b>, and between 2024 and 2025 I developed a <b>strong passion</b> for the programming world, from <b>frontend</b> to <b>backend</b> development.`,
     chisonoPar2: `By attending a <b>Fullstack Developer</b> course lasting almost a year, I gained <b>foundational skills</b> starting from <b>HTML and CSS, to JavaScript and Angular.</b> Then I moved on to the backend part with <b>MySQL, Java basics and Spring.</b>`,
@@ -208,7 +210,8 @@ function aggiornaTesti() {
   btns[0].innerText = t.chi;
   btns[1].innerText = t.competenze;
   btns[2].innerText = t.progetti;
-  btns[3].innerText = t.contatti;
+  btns[3].innerText = t.achievements;
+  btns[4].innerText = t.contatti;
 
   // Chisono section
   const chisono = document.querySelector("#chisono");
